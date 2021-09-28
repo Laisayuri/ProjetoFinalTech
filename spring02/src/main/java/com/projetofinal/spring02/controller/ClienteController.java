@@ -34,7 +34,7 @@ public class ClienteController {
         }
     }
 
-    @PostMapping("/new") //cadastrar novos clientes
+    @PostMapping("/novo") //cadastrar novos clientes
     // os dados virão no Body = corpo da requisição
     public ResponseEntity<Cliente> novoCliente(@RequestBody Cliente Cliente) {
         if(Cliente.getCodigo() != 0) {

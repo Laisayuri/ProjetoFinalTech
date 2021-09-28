@@ -1,23 +1,41 @@
 package com.projetofinal.spring02.model;
-    public class ContaBancaria {
 
-        private int numero;
-        private int agencia;
-        private double saldo;
-        private String titular;
-        private int tipoConta;
 
-        public ContaBancaria(int numero, int agencia, double saldo, String titular, int tipoConta) {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-        this.numero = numero;
-        this.agencia = agencia;
-        this.saldo = saldo;
-        this.titular = titular;
-        this.tipoConta = tipoConta;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-        }
+@Entity
+@Table(name = "tb_conta")
+public class ContaBancaria {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "numero")
+    private int numero;
 
-    
+    @Column(name = "agencia")
+    private int agencia;
+
+    @Column(name = "saldo")
+    private double saldo;
+
+    @Column(name = "tipo")
+    private int tipoConta;
+
+    // cada conta é de um único cliente
+    // mas um cliente pode ter varias contas
+    @ManyToOne 
+    @JoinColumn(name = "tb_cliente")
+    @JsonIgnoreProperties("cliente") // ao buscar o cliente não traga novamente as contas
+    private Cliente titular;
+       
 
     public int getNumero() {
         return numero;
@@ -43,11 +61,11 @@ package com.projetofinal.spring02.model;
         this.saldo = saldo;
     }
 
-    public String getTitular() {
+    public Cliente getTitular() {
         return titular;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Cliente titular) {
         this.titular = titular;
     }
 
