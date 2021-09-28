@@ -17,9 +17,9 @@ package com.projetofinal.spring02.model;
 
         }
 
-    }
+    
 
-public int getNumero() {
+    public int getNumero() {
         return numero;
     }
 
@@ -59,3 +59,4 @@ public int getNumero() {
         this.tipoConta = tipoConta;
     }
 }
+
