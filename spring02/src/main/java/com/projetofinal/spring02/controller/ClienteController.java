@@ -1,7 +1,5 @@
 package com.projetofinal.spring02.controller;
 
-import java.util.List;
-
 import com.projetofinal.spring02.model.Cliente;
 import com.projetofinal.spring02.repository.ClienteRepo;
 
@@ -23,10 +21,6 @@ public class ClienteController {
     @Autowired // pede para implementar a classe e os métodos de acesso
     private ClienteRepo repo;
     
-    @GetMapping("/consulta") //consulta de todos os clientes criados
-    public List<Cliente> obterTodos() {
-        return (List<Cliente>) repo.findAll();
-    } 
 
     @GetMapping("/id/{codigo}")
     public ResponseEntity<Cliente> Cliente(@PathVariable long codigo) {
