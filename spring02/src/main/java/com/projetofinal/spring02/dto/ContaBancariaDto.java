@@ -14,6 +14,10 @@ public class ContaBancariaDto {
     @Autowired
     private ContaRepo repoConta;
 
+    public ContaBancaria novaContaBancaria(ContaBancaria contaNova){
+        ContaBancaria contaInserida = repoConta.save(contaNova);
+        return contaInserida;
+    }
     public List<ContaBancaria> listarTodasContas() {
         List<ContaBancaria> lista = (List<ContaBancaria>) repoConta.findAll();
         return lista;
