@@ -22,7 +22,7 @@ public class Cliente {
      private String nome;
 
      @Column(name = "cpf", length = 12, nullable = false, unique = true)
-     private int cpf;
+     private String cpf;
 
      @Column(name = "telefone", length = 15, nullable = false)
      private String telefone;
@@ -30,9 +30,11 @@ public class Cliente {
      @Column(name = "email", length = 50, nullable = false, unique = true)
      private String email;
 
+     public Cliente(){
+          
+     }
 
-
-     public Cliente(String nome, int cpf, String telefone, String email) {
+     public Cliente(String nome, String cpf, String telefone, String email) {
           this.nome = nome;
           this.cpf = cpf;
           this.telefone = telefone;
@@ -55,11 +57,11 @@ public class Cliente {
           this.nome = nome;
      }
 
-     public int getCpf() {
+     public String getCpf() {
           return cpf;
      }
 
-     public void setCpf(int cpf) {
+     public void setCpf(String cpf) {
           this.cpf = cpf;
      }
 
