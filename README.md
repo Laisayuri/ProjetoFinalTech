@@ -47,7 +47,7 @@ Por:
 
 - Lucas Eduardo Carlos Cravo
 - Natalico Junior
-- Lais
+- Lais Yasunaka
 - Diego Justino
 - Jonatha Teixeira
-- Denise
+- Denise Regert Mocellin
