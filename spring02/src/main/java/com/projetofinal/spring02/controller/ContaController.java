@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,23 +17,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/conta") // Qual o nome do recurso http://localhost:8080/projetofinal
 @CrossOrigin("*")
 public class ContaController {
+
     @Autowired // pede para implementar a classe e os métodos de acesso
     private ContaBancariaDto dtoContaBancaria;
 
-    @PostMapping("/nova")//cadastrar novas contas
-    public ResponseEntity<ContaBancaria> criarConta(@RequestBody ContaBancaria conta) {
-        ContaBancaria contaInserida = dtoContaBancaria.novaContaBancaria(conta);
-        return ResponseEntity.ok(contaInserida);
-    }
+    // @PostMapping("/nova")//cadastrar novas contas
+    // public ResponseEntity<ContaBancaria> criarConta(@RequestBody ContaBancaria conta) {
+    //     ContaBancaria contaInserida = dtoContaBancaria.novaContaBancaria(conta);
+    //     return ResponseEntity.ok(contaInserida);
+    // }
     
     @GetMapping("/contas") //mostrar todas as contas
     public List<ContaBancaria> obterTodasContas() {
         return dtoContaBancaria.listarTodasContas();
     }
 
-    @GetMapping("/contas/{codigo}") //encontrar conta de acordo com {codigo}
-    public ResponseEntity<ContaBancaria> buscarCodigo(@PathVariable long codigo) {
-        ContaBancaria contaEncontrada = dtoContaBancaria.buscarContaPorCodigo(codigo);
+    @GetMapping("/{numero}") //encontrar conta de acordo com {numero}
+    public ResponseEntity<ContaBancaria> getByNumero(@PathVariable long numero) {
+        ContaBancaria contaEncontrada = dtoContaBancaria.buscarContaPorCodigo(numero);
         // procura uma conta cujo id = código do parâmetro.
         // se não encontrar coloca 'null' na conta encontrada
         if(contaEncontrada !=null) {
