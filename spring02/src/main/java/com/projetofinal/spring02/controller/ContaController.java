@@ -4,11 +4,14 @@ import java.util.List;
 
 import com.projetofinal.spring02.dto.ContaBancariaDto;
 import com.projetofinal.spring02.model.ContaBancaria;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +22,12 @@ public class ContaController {
     @Autowired // pede para implementar a classe e os métodos de acesso
     private ContaBancariaDto dtoContaBancaria;
 
+    @PostMapping("/nova")//cadastrar novas contas
+    public ResponseEntity<ContaBancaria> criarConta(@RequestBody ContaBancaria conta) {
+        ContaBancaria contaInserida = dtoContaBancaria.novaContaBancaria(conta);
+        return ResponseEntity.ok(contaInserida);
+    }
+    
     @GetMapping("/contas") //mostrar todas as contas
     public List<ContaBancaria> obterTodasContas() {
         return dtoContaBancaria.listarTodasContas();

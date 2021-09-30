@@ -26,7 +26,7 @@ public class ContaBancaria {
     @Column(name = "saldo")
     private double saldo;
 
-    @Column(name = "tipo")
+    @Column(name = "tipoConta")
     private int tipoConta;
 
     // cada conta é de um único cliente
