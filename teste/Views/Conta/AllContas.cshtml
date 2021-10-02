@@ -1,0 +1,33 @@
+@model List<Conta>
+
+<h1>Lista de Todas as Contas</h1>
+<hr>
+<table class="table table-striped table-hover">
+    <thead>
+        <th scope="col">Número</th>
+        <th scope="col">Agência</th>
+        <th scope="col">Saldo</th>
+        <th scope="col">Tipo de Conta</th>
+        <th scope="col">Código de Cliente</th>
+        <th scope="col">Titular</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">E-mail</th>
+    </thead>
+    <tbody>
+        @foreach (Conta dado in Model)
+        {
+            <tr>
+                <td>@dado.numero</td>
+                <td>@dado.agencia</td>
+                <td>@dado.saldo</td>
+                <td>@dado.tipoConta</td>
+                <td>@dado.titular.codigo</td>
+                <td>@dado.titular.nome</td>
+                <td>@dado.titular.cpf</td>
+                <td>@dado.titular.telefone</td>
+                <td>@dado.titular.email</td>
+            </tr>
+        }
+    </tbody>
+</table>

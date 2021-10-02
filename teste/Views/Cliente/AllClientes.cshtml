@@ -1,0 +1,25 @@
+@model List<Cliente>
+
+<h1>Lista de Todos os clientes</h1>
+<hr>
+<table class="table table-striped table-hover">
+    <thead>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">TELEFONE</th>
+        <th scope="col">EMAIL</th>
+    </thead>
+    <tbody>
+        @foreach (Cliente titulares in Model)
+        {
+            <tr>
+                <td>@titulares.codigo</td>
+                <td>@titulares.nome</td>
+                <td>@titulares.cpf</td>
+                <td>@titulares.telefone</td>
+                <td>@titulares.email</td>
+            </tr>
+        }
+    </tbody>
+</table>
