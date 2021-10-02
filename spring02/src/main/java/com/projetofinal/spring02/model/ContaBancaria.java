@@ -18,7 +18,7 @@ public class ContaBancaria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "numero")
-    private int numero;
+    private long numero;
 
     @Column(name = "agencia")
     private int agencia;
@@ -26,22 +26,21 @@ public class ContaBancaria {
     @Column(name = "saldo")
     private double saldo;
 
-    @Column(name = "tipoConta")
+    @Column(name = "tipo")
     private int tipoConta;
 
-    // cada conta é de um único cliente
-    // mas um cliente pode ter varias contas
+    
     @ManyToOne 
-    @JoinColumn(name = "tb_cliente")
-    @JsonIgnoreProperties("cliente") // ao buscar o cliente não traga novamente as contas
+    @JoinColumn(name = "cod_cliente")
+    @JsonIgnoreProperties("contas") // ao buscar o cliente não traga novamente as contas
     private Cliente titular;
        
 
-    public int getNumero() {
+    public long getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(long numero) {
         this.numero = numero;
     }
 

@@ -1,0 +1,40 @@
+@Model Conta
+@using teste.Models
+
+<h3>Selecionar uma conta para consulta</h3>
+<hr>
+<form>
+    <label>Número da Conta: </label>
+    <input type="number" id="numero" name="numero">
+    <input type="submit" value="Procurar" formmethod="POST">
+</form>
+
+@if(Model!=null)
+{
+    <hr>
+    <h4><b>Conta do titular: </b>@Model.titular.nome</h4>
+    <table class="table table-striped table-hover">
+        <thead>
+            <th scope="col">Número</th>
+            <th scope="col">Agência</th>
+            <th scope="col">Saldo</th>
+            <th scope="col">Tipo de Conta</th>
+            <th scope="col">Código de Cliente</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+        </thead>
+        <tbody>                        
+                <tr>
+                <td>@Model.numero</td>
+                <td>@Model.agencia</td>
+                <td>@Model.saldo</td>
+                <td>@Model.tipoConta</td>
+                <td>@Model.titular.codigo</td>
+                <td>@Model.titular.cpf</td>
+                <td>@Model.titular.telefone</td>
+                <td>@Model.titular.email</td>
+                </tr>            
+        </tbody>
+    </table>
+}

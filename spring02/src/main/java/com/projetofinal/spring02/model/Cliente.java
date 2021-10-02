@@ -1,12 +1,17 @@
 package com.projetofinal.spring02.model;
 
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity // esta classe será mapeada no Banco de Dados
 @Table(name = "tb_cliente")
@@ -29,6 +34,11 @@ public class Cliente {
 
      @Column(name = "email", length = 50, nullable = false, unique = true)
      private String email;
+
+     // Um cliente pode ter várias contas
+    @OneToMany(mappedBy = "titular")
+    @JsonIgnoreProperties("titular") // ao buscar ascontas não traga novamente o titular
+    private List<ContaBancaria> contas;
 
      public Cliente(){
           
@@ -80,5 +90,13 @@ public class Cliente {
      public void setEmail(String email) {
           this.email = email;
      }
+
+     public List<ContaBancaria> getContas() {
+          return contas;
+      }
+  
+      public void setContas(List<ContaBancaria> contas) {
+          this.contas = contas;
+      }
           
 }

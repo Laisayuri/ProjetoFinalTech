@@ -14,17 +14,18 @@ public class ContaBancariaDto {
     @Autowired
     private ContaRepo repoConta;
 
-    public ContaBancaria novaContaBancaria(ContaBancaria contaNova){
-        ContaBancaria contaInserida = repoConta.save(contaNova);
-        return contaInserida;
-    }
+    // public ContaBancaria novaContaBancaria(ContaBancaria contaNova){
+    //     ContaBancaria contaInserida = repoConta.save(contaNova);
+    //     return contaInserida;
+    // }
+
     public List<ContaBancaria> listarTodasContas() {
         List<ContaBancaria> lista = (List<ContaBancaria>) repoConta.findAll();
         return lista;
     }
 
-    public ContaBancaria buscarContaPorCodigo(long contaCodigo){
-        ContaBancaria contaBancaria = repoConta.findById(contaCodigo).orElse(null);
+    public ContaBancaria buscarContaPorCodigo(long contaNumero){
+        ContaBancaria contaBancaria = repoConta.findById(contaNumero).orElse(null);
         return contaBancaria;
     }
 }
