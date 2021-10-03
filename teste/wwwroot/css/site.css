@@ -21,7 +21,7 @@ a, th, tr, td {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: orange;
-  background-color: black;
+  background-color: white;
 }
 
 /* Sticky footer styles
@@ -68,8 +68,8 @@ body {
 }
 
 .container {
+  text-align: center;
   background-color: black;
-  color: orange;
 }
 
 .footer {
