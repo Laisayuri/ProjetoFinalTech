@@ -10,12 +10,12 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a, th, tr, td {
-  color: orange;
+  color: black;
 }
 
 .btn-primary {
-  color: orange;
-  background-color: black;
+  color: black;
+  background-color: white;
   border-color: #1861ac;
 }
 
@@ -63,13 +63,12 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  color: orange;
-  background-color: black;
+  background-color: white;
 }
 
 .container {
   text-align: center;
-  background-color: black;
+  color: black;
 }
 
 .footer {
@@ -84,14 +83,30 @@ body {
 
 h2, h3, h4 {
   text-align: center;
-  color: orange;
+  color: black;
+}
+
+h5{
+  margin-top: -28px;
+  text-align: center;
 }
 
 .perfil, .img {
   margin-inline-end: 25px;
-  height: 20%;
-  width: 20%;
-  display: inline;
-  text-align: center;
-  flex: 0 0 auto;
+  margin-top: 5px;
+  height: 300px;
+  width: 300px;
+  float: left;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  }
+
+  #conteudo{
+    width: 1000px;
+    margin: 0px auto;
+  }
+
+  .rodape-top {
+    width: 100%;
+    clear: both;
   }

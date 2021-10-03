@@ -8,24 +8,31 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Cabri\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuário\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
+      "projectUniqueName": "D:\\Users\\Diego\\Desktop\\ProjetoFinalTech\\teste\\teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
-      "packagesPath": "C:\\Users\\Cabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\obj\\",
+      "projectPath": "D:\\Users\\Diego\\Desktop\\ProjetoFinalTech\\teste\\teste.csproj",
+      "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\Diego\\Desktop\\ProjetoFinalTech\\teste\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Cabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
