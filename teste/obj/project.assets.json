@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Cabri\\.nuget\\packages\\": {}
+    "C:\\Users\\drmoc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cabri\\Desktop\\teste\\teste.csproj",
+      "projectUniqueName": "C:\\Users\\drmoc\\OneDrive\\Documentos\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\Cabri\\Desktop\\teste\\teste.csproj",
-      "packagesPath": "C:\\Users\\Cabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cabri\\Desktop\\teste\\obj\\",
+      "projectPath": "C:\\Users\\drmoc\\OneDrive\\Documentos\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
+      "packagesPath": "C:\\Users\\drmoc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\drmoc\\OneDrive\\Documentos\\GitHub\\ProjetoFinalTech\\teste\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Cabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\drmoc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
