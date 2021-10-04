@@ -37,7 +37,7 @@ public class Cliente {
 
      // Um cliente pode ter várias contas
     @OneToMany(mappedBy = "titular")
-    @JsonIgnoreProperties("titular") // ao buscar ascontas não traga novamente o titular
+    @JsonIgnoreProperties("titular") 
     private List<ContaBancaria> contas;
 
      public Cliente(){

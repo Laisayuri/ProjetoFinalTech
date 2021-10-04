@@ -27,6 +27,7 @@ public class ContaController {
     //     return ResponseEntity.ok(contaInserida);
     // }
     
+    //endopoints
     @GetMapping("/contas") //mostrar todas as contas
     public List<ContaBancaria> obterTodasContas() {
         return dtoContaBancaria.listarTodasContas();
@@ -35,8 +36,7 @@ public class ContaController {
     @GetMapping("/{numero}") //encontrar conta de acordo com {numero}
     public ResponseEntity<ContaBancaria> getByNumero(@PathVariable long numero) {
         ContaBancaria contaEncontrada = dtoContaBancaria.buscarContaPorCodigo(numero);
-        // procura uma conta cujo id = código do parâmetro.
-        // se não encontrar coloca 'null' na conta encontrada
+        
         if(contaEncontrada !=null) {
             return ResponseEntity.ok(contaEncontrada);
         } else {
