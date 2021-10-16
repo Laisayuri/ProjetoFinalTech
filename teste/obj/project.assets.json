@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Cabri\\.nuget\\packages\\": {}
+    "/Users/lais.yasunaka/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
+      "projectUniqueName": "/Users/lais.yasunaka/Documents/GitHub/ProjetoFinalTech/teste/teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\teste.csproj",
-      "packagesPath": "C:\\Users\\Cabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cabri\\Documents\\GitHub\\ProjetoFinalTech\\teste\\obj\\",
+      "projectPath": "/Users/lais.yasunaka/Documents/GitHub/ProjetoFinalTech/teste/teste.csproj",
+      "packagesPath": "/Users/lais.yasunaka/.nuget/packages/",
+      "outputPath": "/Users/lais.yasunaka/Documents/GitHub/ProjetoFinalTech/teste/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Cabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/lais.yasunaka/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
